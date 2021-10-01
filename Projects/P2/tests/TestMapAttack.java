@@ -13,7 +13,7 @@ public class TestMapAttack {
 		PacMan pacman = frame.addPacMan(new Location(x - 1, y - 1));
 		Map map = frame.getMap();
 		
-		int change_x = 0, change_y = -1;
+		int change_x = -1, change_y = -1;
 		while (!ghost.is_pacman_in_range() && change_y <= 1) {
 			map.move("pacman", new Location(x + change_x, y + change_y), Map.Type.PACMAN);
 			
