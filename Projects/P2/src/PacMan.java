@@ -15,6 +15,7 @@ public class PacMan{
 		this.myLoc = loc;
 		this.myName = name;
 		this.myMap = map;
+		this.rand = new Random();
 	}
 
 	public ArrayList<Location> get_valid_moves() {
