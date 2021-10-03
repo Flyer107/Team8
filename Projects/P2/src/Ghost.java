@@ -22,6 +22,7 @@ public class Ghost{
 
 	public boolean is_pacman_in_range() { 
 		Location pacman_top_left = myLoc.shift(-1, 1);
+		
 		Location pacman_top = myLoc.shift(0, 1);
 		Location pacman_top_right = myLoc.shift(1, 1);
 		Location pacman_left = myLoc.shift(-1, 0);
