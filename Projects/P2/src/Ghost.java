@@ -16,7 +16,7 @@ public class Ghost{
     ArrayList<Location> validMoves = new ArrayList<Location>();
 
     for (int x = -1; x < 2; x++) {
-      for (int y = 1; y < 2; y++) {
+      for (int y = -1; y < 2; y++) {
         Location loc = this.myLoc.shift(x, y);
         if (!this.myMap.getLoc(loc).contains(Map.Type.WALL)) {
           validMoves.add(loc);
