@@ -55,12 +55,17 @@ public class Map{
 	public boolean move(String name, Location loc, Type type) {
 		//update locations, components, and field
 		//use the setLocation method for the component to move it to the new location
-	        field.get(locations.get(name)).remove(type); // Remove the type of old location
-	        if (field.get(locations.get(name)).isEmpty()) field.remove(locations.get(name)); // If old location is empty, remove it
-	        locations.get(name).shift(loc.x, loc.y); // Update locations
-	        components.get(name).setLocation(loc.x, loc.y); // update components
-	        if (!field.containsKey(loc)) field.put(loc, new HashSet<Type>()); // copied from add function
-	        field.get(loc).add(type); // copied from add function
+	        if(locations.containsKey(name) && components.containsKey(name)) {
+			field.get(locations.get(name)).remove(type); // Remove the type of old location
+			if (field.get(locations.get(name)).isEmpty()) field.remove(locations.get(name)); // If old location is empty, remove it
+			locations.get(name).shift(loc.x, loc.y); // Update locations
+			components.get(name).setLocation(loc.x, loc.y); // update components
+			if (!field.containsKey(loc)) field.put(loc, new HashSet<Type>()); // copied from add function
+			field.get(loc).add(type); // copied from add function
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	public HashSet<Type> getLoc(Location loc) {
