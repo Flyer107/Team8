@@ -60,7 +60,20 @@ public class Map{
 	
 	public HashSet<Type> getLoc(Location loc) {
 		//wallSet and emptySet will help you write this method
-		return null;
+
+		if (field.get(loc) != null) {
+			
+			if (field.get(loc).contains(Type.PACMAN) && field.get(loc).contains(Type.GHOST)) {
+				return null;
+			} else if (field.containsKey(Type.WALL)) {
+				return wallSet;
+			} else {
+				return field.get(loc);
+			}
+
+		}
+
+		return emptySet;
 	}
 
 	public boolean attack(String Name) {
