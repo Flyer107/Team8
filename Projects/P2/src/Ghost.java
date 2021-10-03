@@ -1,6 +1,5 @@
 import java.util.HashSet;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Ghost{
 	String myName;
