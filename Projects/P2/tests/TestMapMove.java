@@ -2,7 +2,7 @@ import junit.framework.*;
 import java.awt.Color;
 import java.io.*;
 
-public class TestMapMove {
+public class TestMapMove extends TestCase {
 
 	public void testMapMove() {
 	    // Initializations
@@ -16,7 +16,7 @@ public class TestMapMove {
 	    assertTrue(m.move(name, destLoc, Map.Type.PACMAN));
 	    assertTrue(m.getLoc(initLoc).contains(Map.Type.EMPTY));
 	    assertTrue(!m.getLoc(destLoc).contains(Map.Type.EMPTY)); 
-	    assertTrue(m.getLoc().contains(Map.Type.PACMAN));
+	    assertTrue(m.getLoc(destLoc).contains(Map.Type.PACMAN));
 
 	    assertFalse(m.move("ioehoihs", destLoc, Map.Type.GHOST));
 	}
