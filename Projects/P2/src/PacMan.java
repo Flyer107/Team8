@@ -26,6 +26,7 @@ public class PacMan{
 		ArrayList<Location> moves = this.get_valid_moves();
 		if(moves.size() > 0) {
 			int randIndex = rand.nextInt(moves.size());
+			this.myLoc = moves.get(randIndex);
 			return this.myMap.move(this.myName, moves.get(randIndex), Map.Type.PACMAN);
 		} else {
 			return false;
