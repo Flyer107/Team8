@@ -57,7 +57,7 @@ public class Map{
 		//use the setLocation method for the component to move it to the new location
 	        if(locations.containsKey(name) && components.containsKey(name)) {
 		        field.get(locations.get(name)).remove(type); // Remove the type of old location
-			if (field.get(locations.get(name)).isEmpty()) field.get(locations.get(name)).put(Type.EMPTY); // If old location is empty, add EMPTY to hashset
+			if (field.get(locations.get(name)).isEmpty()) field.get(locations.get(name)).add(Type.EMPTY); // If old location is empty, add EMPTY to hashset
 			locations.replace(name, loc); // Update locations
 			components.get(name).setLocation(loc.x, loc.y); // update components
 			if (!field.containsKey(loc)) field.put(loc, new HashSet<Type>()); // copied from add function
