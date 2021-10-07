@@ -31,7 +31,7 @@ public class TestGhostValidMoves extends TestCase {
           testMap.add("ghost", loc, ghost, Map.Type.GHOST);
         } else {
           CookieComponent tok = new CookieComponent(loc.x, loc.y, 20);
-          myMap.add("tok_x" + row + "_y" + col, loc, tok, Map.Type.COOKIE);
+          testMap.add("tok_x" + row + "_y" + col, loc, tok, Map.Type.COOKIE);
         }
       }
     }
