@@ -71,9 +71,8 @@ location. Returns true if able and false if not.
 ## Pacman
 
 ### TestPacManMove
-- **Description**: This tests if the move() function returns false if there are no valid
-moves, and true if there is a valid move. It also checks if the move itself was
-a valid move.
+- **Description**: This tests if the move() function returns true if there is a valid move. It also
+checks if the move itself was a valid move.
 
 ### TestGhostInRange
 - **Description**: The test returns true if ghost is 1 attack radius away from PacMan, else it returns false.
@@ -85,9 +84,8 @@ a valid move.
 ## Ghost
 
 ### TestGhostMove
-- **Description**: This tests if the move() function returns false if there are no valid
-moves, and true if there is a valid move. It also checks if the move itself was
-a valid move. 
+- **Description**: This tests if the move() function returns true if there is a valid move. It also
+checks if the move itself was a valid move. 
 
 ### TestPacManInRange
 - **Description**: The tests returns true if PacMan is 1 attack radius away from ghost, else it returns false.
