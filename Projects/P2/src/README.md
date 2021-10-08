@@ -27,7 +27,10 @@ Map.move(). Returns true if able and false if not.
 
 - **Description**: Check PacMan's surrounding to see if any Ghosts are in attack range. 
 
-### Function here
+### get_valid_moves
+- **Type*: `() -> ArrayList<Location>
+
+- **Description**: Check PacMan's surroundings to see which Locations are available to move to. Pacman cannot move to Locations that are occupied by Walls or Ghosts
 
 ### Function here
 
@@ -77,7 +80,10 @@ checks if the move itself was a valid move.
 ### TestGhostInRange
 - **Description**: The test returns true if ghost is 1 attack radius away from PacMan, else it returns false.
 
-### Test here
+### TestPacManGetValidMoves
+-**Description**: The first test places Pacman in a small 3x3 game board and fills the top row with walls and the left column with ghosts. The test returns true if Pacman has 3 available moves and can only move to locations (1,2) (2,1) and (2,2).
+
+The second test surrounds Pacman with walls and returns true if he has no available moves.
 
 ### Test here
 
