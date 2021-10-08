@@ -1,7 +1,6 @@
 import java.util.HashSet;
 import java.util.ArrayList;
 import javax.swing.JComponent;
-import java.util.Random;
 
 
 public class PacMan{
@@ -9,7 +8,6 @@ public class PacMan{
 	Location myLoc;
 	Map myMap;
 	Location shift;
-	Random rand;
 
 	public PacMan(String name, Location loc, Map map) {
 		this.myLoc = loc;
