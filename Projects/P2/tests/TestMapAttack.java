@@ -17,8 +17,6 @@ public class TestMapAttack extends TestCase {
 		if (ghost.is_pacman_in_range()) {
 			map.attack("test");
 			assertTrue(map.isGameOver());
-			assertEquals(pacman.myLoc.x, ghost.myLoc.x);
-			assertEquals(pacman.myLoc.y, ghost.myLoc.y);
 		} else {
 			assertTrue(false);
 		}

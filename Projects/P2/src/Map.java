@@ -88,9 +88,7 @@ public class Map{
 	}
 
 	public boolean attack(String Name) {
-		Location pacman_loc = this.locations.get("pacman");
-		move(Name, pacman_loc, Type.GHOST);
-		this.gameOver = true;
+ 		this.gameOver = true;
 		return true;
 	}
 	
