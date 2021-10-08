@@ -11,7 +11,7 @@ public class TestConsume extends TestCase {
 		PacMan pacman = frame.addPacMan(new Location(x, y));
 		Map map = frame.getMap();
 		CookieComponent test = new CookieComponent(x,y,20);
-		map.add("power-cookie", new Location(x, y), test, Map.Type.COOKIE);
+		map.add("tok_x1_y1", new Location(x, y), test, Map.Type.COOKIE);
 	
 		JComponent consumed = pacman.consume();
 		assertEquals(consumed, test);

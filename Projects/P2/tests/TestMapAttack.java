@@ -7,28 +7,12 @@ import junit.framework.*;
 public class TestMapAttack extends TestCase {
 
 	public void testMapAttack() throws FileNotFoundException{
-		int x = 2;
-		int y = 2;
-		MainFrame frame = new MainFrame();
-		Ghost ghost = frame.addGhost(new Location(x, y), "test", Color.red);
-		PacMan pacman = frame.addPacMan(new Location(x - 1, y - 1));
+		NoFrame frame = new NoFrame(); //Creates A New Map With Walls and Tokens w/o a Display
+
+		//Creating Players
+		Ghost ghost = frame.addGhost(new Location(9, 11), "name", Color.red); //Creates a red ghost named "name" at location x,y
+		PacMan pacman = frame.addPacMan(new Location(9, 12)); //Creates PacMan at location x, y
 		Map map = frame.getMap();
-		
-		int change_x = -1, change_y = -1;
-		while (!ghost.is_pacman_in_range() && change_y <= 1) {
-			map.move("pacman", new Location(x + change_x, y + change_y), Map.Type.PACMAN);
-			
-			if (change_x >= 1) {
-				change_y++;
-				change_x = -1;
-			} else {
-				change_x++;
-			}
-			
-			if (change_x == 0 && change_y == 0) {
-				change_x++;
-			}
-		}
 		
 		if (ghost.is_pacman_in_range()) {
 			map.attack("test");
