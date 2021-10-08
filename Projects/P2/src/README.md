@@ -28,11 +28,15 @@ Map.move(). Returns true if able and false if not.
 - **Description**: Check PacMan's surrounding to see if any Ghosts are in attack range. 
 
 ### get_valid_moves
-- **Type*: `() -> ArrayList<Location>
+- **Type**: `() -> ArrayList<Location>
 
 - **Description**: Check PacMan's surroundings to see which Locations are available to move to. Pacman cannot move to Locations that are occupied by Walls or Ghosts
 
-### Function here
+### consume()
+- **Type**: `() -> JComponent
+
+
+- **Description**: Checks to see if there is a cookie at Pacman's location. If there is, it makes Pacman eat the cookie, and returns the cookie component that was eaten. If there is no cookie, it returns null.
 
 ## Ghost
 
@@ -50,7 +54,10 @@ Map.move(). Returns true if able and false if not.
 
 ### Function here
 
-### Function here
+### Attack()
+- **Type**: `() -> Bool`
+
+- **Description**: Checks to see if Pacman is in range of the ghost. If it is, the function calls map's attack function and returns it's output. If not, it returns false.
 
 ## Map
 
@@ -61,11 +68,15 @@ Map.move(). Returns true if able and false if not.
 location. Returns true if able and false if not. 
 
 ### getLoc(Location loc)
-- **Type**: `(Location loc) -> HashSet<Type>`
+- **Type**: `(Location) -> HashSet<Type>`
 
 - **Description**: Given a location argument, it returns what is currently at the location (Empty, Pacman, Cookie, Ghost, Wall).
 
-### Function here
+### attack(String Name)
+- **Type**: `(String) -> Bool`
+
+- **Description**: Designates the end of the game by setting the map's isGameOver value to true. It then returns true.
+
 
 ### Function here
 
@@ -85,7 +96,8 @@ checks if the move itself was a valid move.
 
 The second test surrounds Pacman with walls and returns true if he has no available moves.
 
-### Test here
+### TestConsume
+- **Description**: Test creates pacman and cookie objects and calls the consume function to make the pacman eat the cookie. The test then checks if the cookie returned matched the cookie inputted, and whether the cookie was successfully removed from the map.
 
 ## Ghost
 
@@ -96,7 +108,8 @@ checks if the move itself was a valid move.
 ### TestPacManInRange
 - **Description**: The tests returns true if PacMan is 1 attack radius away from ghost, else it returns false.
 
-### Test here
+### TestAttack
+- **Description**: The first test creates pacman and ghost objects next to each other. The ghost then calls the attack function. The test passes if the map object confirms the game is over, both from the map object itself, and from the ghost's map reference. The second test creates a pacman and ghost object with some distance between them. The test passes if the attack function returns false.
 
 ### Test here
 
@@ -110,6 +123,7 @@ an object that does not exist does not move and returns false.
 ### TestMapGetLoc
 - **Description**: Tests if the correct object is being returned for a specific location.
 
-### Test here
+### TestMapAttack
+- **Description**: Test creates a pacman and ghost object next to each other, and calls the map's attack function. The test passes if the isGameOver value changes to true.
 
 ### Test here
