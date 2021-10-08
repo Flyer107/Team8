@@ -21,7 +21,7 @@ public class Ghost {
     for (int x = -1; x < 2; x++) {
       for (int y = -1; y < 2; y++) {
         Location loc = this.myLoc.shift(x, y);
-        if (!this.myMap.getLoc(loc).contains(Map.Type.WALL)) {
+        if (!loc.equals(this.myLoc) && !this.myMap.getLoc(loc).contains(Map.Type.WALL)) {
           validMoves.add(loc);
         }
       }
