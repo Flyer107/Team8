@@ -13,6 +13,7 @@ insert image here
 
 ### move()
 Type: () -> Bool
+
 Description: Given current location, find a possible location for PacMan to move
 using get_valid_moves method. This updates the location of PacMan and also calls
 Map.move(). Returns true if able and false if not.
@@ -27,6 +28,7 @@ Map.move(). Returns true if able and false if not.
 
 ### move()
 Type: () -> Bool
+
 Description: Given current location, find a possible location for Ghost to move
 using get_valid_moves method. This updates the location of Ghost and also calls
 Map.move(). Returns true if able and false if not.
@@ -41,6 +43,7 @@ Map.move(). Returns true if able and false if not.
 
 ### move()
 Type: (String name, Location loc, Type type) -> Bool
+
 Description: Method takes name, location, and type and put the object in the given
 location. Returns true if able and false if not. 
 
