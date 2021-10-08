@@ -1,18 +1,15 @@
 import java.util.HashSet;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Ghost{
 	String myName;
 	Location myLoc;
 	Map myMap;
-        Random rand;
 
 	public Ghost(String name, Location loc, Map map) {
 		this.myLoc = loc;
 		this.myName = name;
 		this.myMap = map;
-		this.rand = new Random();
 	}
 
 	public ArrayList<Location> get_valid_moves() {
