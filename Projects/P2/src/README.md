@@ -97,8 +97,7 @@ checks if the move itself was a valid move.
 - **Description**: The test returns true if ghost is 1 attack radius away from PacMan, else it returns false.
 
 ### TestPacManGetValidMoves
-- **Description**: 
-- The first test places Pacman in a small 3x3 game board and fills the top row with walls and the left column with ghosts. The test returns true if Pacman has 3 available moves and can only move to locations (1,2) (2,1) and (2,2). The second test surrounds Pacman with walls and returns true if he has no available moves.
+- **Description**: The first test places Pacman in a small 3x3 game board and fills the top row with walls and the left column with ghosts. The test returns true if Pacman has 3 available moves and can only move to locations (1,2) (2,1) and (2,2). The second test surrounds Pacman with walls and returns true if he has no available moves.
 
 ### TestConsume
 - **Description**: Test creates pacman and cookie objects and calls the consume function to make the pacman eat the cookie. The test then checks if the cookie returned matched the cookie inputted, and whether the cookie was successfully removed from the map.
