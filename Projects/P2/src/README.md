@@ -51,7 +51,7 @@ Map.move(). Returns true if able and false if not.
 
 - **Description**: Check the ghost's surrounding to see if PacMan is in attack range.
 
-### get_valid_moves
+### get_valid_moves()
 - **Type**: `() -> ArrayList<Location>`
 
 - **Description**: Checks Ghost's surroundings to see which Locations are available to move to. Ghost cannot move to Locations that are occupied by Walls, but can move through other Ghosts or Pacman.
