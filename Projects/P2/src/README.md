@@ -81,9 +81,9 @@ location. Returns true if able and false if not.
 
 
 ### eatCookie(String name)
--**Type**: `(String) -> JComponent`
+- **Type**: `(String) -> JComponent`
 
--**Description**: Registers a cookie eaten by Pacman. Removes the cookie specified by "name" from the components and field HashMaps and increments the Map's cookie counter.
+- **Description**: Registers a cookie eaten by Pacman. Removes the cookie specified by "name" from the components and field HashMaps and increments the Map's cookie counter.
 
 # Tests
 
