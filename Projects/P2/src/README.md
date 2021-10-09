@@ -28,7 +28,7 @@ Map.move(). Returns true if able and false if not.
 - **Description**: Check PacMan's surrounding to see if any Ghosts are in attack range. 
 
 ### get_valid_moves
-- **Type**: `() -> ArrayList<Location>
+- **Type**: `() -> ArrayList<Location>`
 
 - **Description**: Check PacMan's surroundings to see which Locations are available to move to. Pacman cannot move to Locations that are occupied by Walls or Ghosts
 
@@ -52,7 +52,10 @@ Map.move(). Returns true if able and false if not.
 
 - **Description**: Check the ghost's surrounding to see if PacMan is in attack range.
 
-### Function here
+### get_valid_moves
+- **Type**: `() -> ArrayList<Location>`
+
+- **Description**: Check Ghost's surroundings to see which Locations are available to move to. Ghost cannot move to Locations that are occupied by Walls, but can move through other Ghosts or Pacman.
 
 ### Attack()
 - **Type**: `() -> Bool`
@@ -78,7 +81,10 @@ location. Returns true if able and false if not.
 - **Description**: Designates the end of the game by setting the map's isGameOver value to true. It then returns true.
 
 
-### Function here
+### eatCookie(String name)
+-**Type**: `(String) -> JComponent`
+
+-**Description**: Registers a cookie eaten by Pacman. Removes the cookie specified by "name" from the components and field HashMaps and increments the Map's cookie counter.
 
 # Tests
 
@@ -111,7 +117,10 @@ checks if the move itself was a valid move.
 ### TestAttack
 - **Description**: The first test creates pacman and ghost objects next to each other. The ghost then calls the attack function. The test passes if the map object confirms the game is over, both from the map object itself, and from the ghost's map reference. The second test creates a pacman and ghost object with some distance between them. The test passes if the attack function returns false.
 
-### Test here
+### TestPacManGetValidMoves
+-**Description**: The first test places Ghost in a small 3x3 game board and fills the top row with walls and the left column with ghosts. The test returns true if Pacman has 5 available moves and can only move to locations (1, 0) (2, 0) (1,2) (2,1) and (2,2).
+
+The second test surrounds Ghost with walls and returns true if he has no available moves.
 
 ## Map
 
@@ -126,4 +135,10 @@ an object that does not exist does not move and returns false.
 ### TestMapAttack
 - **Description**: Test creates a pacman and ghost object next to each other, and calls the map's attack function. The test passes if the isGameOver value changes to true.
 
-### Test here
+### TesMapEatCookie
+- **Description**: Tests if a cookie is successfully registered as eaten when consumed by Pacman. Test passes if 
+- 
+- 1. the returned cookie matches the cookie whose name is passed in as the parameter
+- 2. the cookie eaten is no longer contained in its former location
+- 3. the player point total has increased by 1
+- 4. attempting to eat a nonexistent cookie returns null
