@@ -138,7 +138,7 @@ an object that does not exist does not move and returns false.
 ### TesMapEatCookie
 - **Description**: Tests if a cookie is successfully registered as eaten when consumed by Pacman. Test passes if 
 - 
--** 1. the returned cookie matches the cookie whose name is passed in as the parameter
--** 2. the cookie eaten is no longer contained in its former location
--** 3. the player point total has increased by 1
--** 4. attempting to eat a nonexistent cookie returns null
+- ** 1. the returned cookie matches the cookie whose name is passed in as the parameter
+- ** 2. the cookie eaten is no longer contained in its former location
+- ** 3. the player point total has increased by 1
+- ** 4. attempting to eat a nonexistent cookie returns null
