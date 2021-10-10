@@ -33,7 +33,7 @@ Map.move(). Returns true if able and false if not.
 - **Description**: Checks PacMan's surroundings to see which Locations are available to move to. Pacman cannot move to Locations that are occupied by Walls or Ghosts.
 
 ### consume()
-- **Type**: `() -> JComponent
+- **Type**: `() -> JComponent`
 
 - **Description**: Checks to see if there is a cookie at Pacman's location. If there is, it makes Pacman eat the cookie, and returns the cookie component that was eaten. If there is no cookie, it returns null.
 
