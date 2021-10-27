@@ -26,7 +26,7 @@ jobs:
           javac -version
           javac -cp "Projects/P2/src/" Projects/P2/src/*.java
           javac -cp "Projects/P2/tests/junit-4.10.jar:src/:tests/" Projects/P2/src/*.java Projects/P2/tests/*.java
-          java -Djava.awt.headless=true -cp "Projects/P2/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestGhostMove
+          java -Djava.awt.headless=true -cp "Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/" org.junit.runner.JUnitCore TestGhostMove
   #
   # TestPacManMove:
   #   runs-on: ubuntu-latest
