@@ -26,12 +26,13 @@ jobs:
           javac -version
           javac -cp "Projects/P2/src/" Projects/P2/src/*.java
           javac -cp "Projects/P2/tests/junit-4.10.jar:src/:tests/" Projects/P2/src/*.java Projects/P2/tests/*.java
-
-  TestPacManMove:
-    runs-on: ubuntu-latest
-    container: openjdk
-    steps:
-      - uses: actions/checkout@v2
-      - name: Test PacMan Move
-        run:
           java -Djava.awt.headless=true -cp "Projects/P2/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManMove
+  #
+  # TestPacManMove:
+  #   runs-on: ubuntu-latest
+  #   container: openjdk
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Test PacMan Move
+  #       run:
+  #         java -Djava.awt.headless=true -cp "Projects/P2/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManMove
