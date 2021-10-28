@@ -25,3 +25,38 @@ jobs:
           java -version
           javac -version
           javac -cp "Projects/P2/src/" Projects/P2/src/*.java
+  
+  TestPacmanValidMoves:
+    runs-on: ubuntu-latest
+    container: openjdk
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Test PacMan Valid Moves
+        run: |
+          javac -cp Projects/P2/tests/junit-4.10.jar:src:tests/ src/*.java Projects/P2/tests/TestPacManValidMoves.java
+          java -cp Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/ org.junit.runner.JUnitCore TestPacManValidMoves
+          
+  TestGhostValidMoves:
+    runs-on: ubuntu-latest
+    container: openjdk
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Test PacMan Valid Moves
+        run: |
+          javac -cp Projects/P2/tests/junit-4.10.jar:src:tests/ src/*.java Projects/P2/tests/TestGhostValidMoves.java
+          java -cp Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/ org.junit.runner.JUnitCore TestGhostValidMoves
+  
+  TestMapEatCookie:
+    runs-on: ubuntu-latest
+    container: openjdk
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Test PacMan Valid Moves
+        run: |
+          javac -cp Projects/P2/tests/junit-4.10.jar:src:tests/ src/*.java Projects/P2/tests/TestMapEatCookie.java
+          java -cp Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/ org.junit.runner.JUnitCore TestMapEatCookie
+          
+          
