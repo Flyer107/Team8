@@ -34,7 +34,7 @@ jobs:
       
       - name: Test PacMan Valid Moves
         run: |
-          javac -cp Projects/P2/tests/junit-4.10.jar:src:tests/ src/*.java Projects/P2/tests/TestPacManValidMoves.java
+          javac -cp Projects/P2/tests/junit-4.10.jar:src:tests/ Projects/P2/src/*.java Projects/P2/tests/TestPacManValidMoves.java
           java -cp Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/ org.junit.runner.JUnitCore TestPacManValidMoves
           
   TestGhostValidMoves:
@@ -45,7 +45,7 @@ jobs:
       
       - name: Test PacMan Valid Moves
         run: |
-          javac -cp Projects/P2/tests/junit-4.10.jar:src:tests/ src/*.java Projects/P2/tests/TestGhostValidMoves.java
+          javac -cp Projects/P2/tests/junit-4.10.jar:src:tests/ Projects/P2/src/*.java Projects/P2/tests/TestGhostValidMoves.java
           java -cp Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/ org.junit.runner.JUnitCore TestGhostValidMoves
   
   TestMapEatCookie:
@@ -56,7 +56,7 @@ jobs:
       
       - name: Test PacMan Valid Moves
         run: |
-          javac -cp Projects/P2/tests/junit-4.10.jar:src:tests/ src/*.java Projects/P2/tests/TestMapEatCookie.java
+          javac -cp Projects/P2/tests/junit-4.10.jar:src:tests/ Projects/P2/src/*.java Projects/P2/tests/TestMapEatCookie.java
           java -cp Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/ org.junit.runner.JUnitCore TestMapEatCookie
           
           
