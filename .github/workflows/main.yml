@@ -43,7 +43,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Test PacMan Valid Moves
+      - name: Test Ghost Valid Moves
         run: |
           javac -cp Projects/P2/tests/junit-4.10.jar:src:tests/ Projects/P2/src/*.java Projects/P2/tests/TestGhostValidMoves.java
           java -Djava.awt.headless=true -cp Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/ org.junit.runner.JUnitCore TestGhostValidMoves
@@ -54,7 +54,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Test PacMan Valid Moves
+      - name: Test Map Eat Cookie
         run: |
           javac -cp Projects/P2/tests/junit-4.10.jar:src:tests/ Projects/P2/src/*.java Projects/P2/tests/TestMapEatCookie.java
           java -Djava.awt.headless=true -cp Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/ org.junit.runner.JUnitCore TestMapEatCookie
