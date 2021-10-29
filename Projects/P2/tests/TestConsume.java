@@ -7,7 +7,7 @@ public class TestConsume extends TestCase {
 
 	public void testConsume() throws FileNotFoundException {
 		int x = 1, y = 1;
-		MainFrame frame = new MainFrame();
+		NoFrame frame = new NoFrame();
 		PacMan pacman = frame.addPacMan(new Location(x, y));
 		Map map = frame.getMap();
 		CookieComponent test = new CookieComponent(x,y,20);
