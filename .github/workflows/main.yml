@@ -58,6 +58,8 @@ jobs:
           
   TestGhostInRange:
     runs-on: ubuntu-latest
+    env: 
+      working-directory: Projects/P2
     container: openjdk
     steps:
       - uses: actions/checkout@v2
