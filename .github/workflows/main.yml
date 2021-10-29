@@ -67,7 +67,7 @@ jobs:
         run: |
           javac -cp "Projects/P2/tests/junit-4.10.jar:src/:tests/" Projects/P2/src/*.java Projects/P2/tests/*.java
           java -Djava.awt.headless=true -cp "Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/" org.junit.runner.JUnitCore TestGhostInRange
-
+        working-directory: ${{env.working-directory}}
   TestPacManInRange:
       runs-on: ubuntu-latest
       container: openjdk
