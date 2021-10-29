@@ -56,7 +56,46 @@ jobs:
         run: |
           javac -cp "Projects/P2/tests/junit-4.10.jar:src/:tests/" Projects/P2/src/*.java Projects/P2/tests/TestMapMove.java
           java -Djava.awt.headless=true -cp "Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/" org.junit.runner.JUnitCore TestMapMove
+          
+  TestGhostInRange:
+    runs-on: ubuntu-latest
+    env: 
+      working-directory: Projects/P2
+    container: openjdk
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test Ghost In Range
+        run: |
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/TestGhostInRange.java
+          java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestGhostInRange
+        working-directory: ${{env.working-directory}}
+      
+  TestPacManInRange:
+    runs-on: ubuntu-latest
+    env: 
+      working-directory: Projects/P2
+    container: openjdk
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test PacMan In Range
+        run: |
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/TestPacManInRange.java
+          java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManInRange
+        working-directory: ${{env.working-directory}}
 
+  TestMapGetLoc:
+    runs-on: ubuntu-latest
+    env: 
+      working-directory: Projects/P2
+    container: openjdk
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test Map Get Loc
+        run: |
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/TestMapGetLoc.java
+          java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestMapGetLoc
+        working-directory: ${{env.working-directory}}
+        
   TestPacmanValidMoves:
     runs-on: ubuntu-latest
     container: openjdk
@@ -90,6 +129,7 @@ jobs:
           javac -cp Projects/P2/tests/junit-4.10.jar:src:tests/ Projects/P2/src/*.java Projects/P2/tests/TestMapEatCookie.java
           java -Djava.awt.headless=true -cp Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/ org.junit.runner.JUnitCore TestMapEatCookie
 
+
   TestConsume:
     runs-on: ubuntu-latest
     container: openjdk
@@ -119,3 +159,4 @@ jobs:
         run: |
           javac -cp "Projects/P2/tests/junit-4.10.jar:src:tests/" Projects/P2/src/*.java Projects/P2/tests/TestMapAttack.java
           java -Djava.awt.headless=true -cp Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/ org.junit.runner.JUnitCore TestMapAttack
+
