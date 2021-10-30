@@ -129,3 +129,34 @@ jobs:
           javac -cp Projects/P2/tests/junit-4.10.jar:src:tests/ Projects/P2/src/*.java Projects/P2/tests/TestMapEatCookie.java
           java -Djava.awt.headless=true -cp Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/ org.junit.runner.JUnitCore TestMapEatCookie
 
+
+  TestConsume:
+    runs-on: ubuntu-latest
+    container: openjdk
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test Consume
+        run: |
+          javac -cp "Projects/P2/tests/junit-4.10.jar:src:tests/" Projects/P2/src/*.java Projects/P2/tests/TestConsume.java
+          java -Djava.awt.headless=true -cp Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/ org.junit.runner.JUnitCore TestConsume
+          
+  TestAttack:
+    runs-on: ubuntu-latest
+    container: openjdk
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test Attack
+        run: |
+          javac -cp "Projects/P2/tests/junit-4.10.jar:src:tests/" Projects/P2/src/*.java Projects/P2/tests/TestAttack.java
+          java -Djava.awt.headless=true -cp Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/ org.junit.runner.JUnitCore TestAttack
+          
+  TestMapAttack:
+    runs-on: ubuntu-latest
+    container: openjdk
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test Map Attack
+        run: |
+          javac -cp "Projects/P2/tests/junit-4.10.jar:src:tests/" Projects/P2/src/*.java Projects/P2/tests/TestMapAttack.java
+          java -Djava.awt.headless=true -cp Projects/P2/tests/junit-4.10.jar:Projects/P2/src/:Projects/P2/tests/ org.junit.runner.JUnitCore TestMapAttack
+
