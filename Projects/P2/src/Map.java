@@ -88,7 +88,7 @@ public class Map{
 	}
 
 	public boolean attack(String Name) {
- 		this.gameOver = true;
+ 		this.gameOver = false;
 		return true;
 	}
 	
