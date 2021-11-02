@@ -63,7 +63,7 @@ public class Map{
 			if (!field.containsKey(loc)) field.put(loc, new HashSet<Type>()); // copied from add function
 			if (field.get(loc).contains(Type.EMPTY)) field.get(loc).remove(Type.EMPTY); // If it was empty before, remove EMPTY in Hashset
 			field.get(loc).add(type); // copied from add function
-			return true;
+			return false;
 		} else {
 			return false;
 		}
