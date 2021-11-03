@@ -101,7 +101,7 @@ public class Map{
     if(cookie_loc != null){
       cookie = this.components.remove(name);
       this.field.get(cookie_loc).remove(Map.Type.COOKIE);
-      this.cookies++;
+      cookies++;
     }
 
     return cookie;
