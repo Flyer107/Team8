@@ -63,7 +63,7 @@ public class Map{
 			if (!field.containsKey(loc)) field.put(loc, new HashSet<Type>()); // copied from add function
 			if (field.get(loc).contains(Type.EMPTY)) field.get(loc).remove(Type.EMPTY); // If it was empty before, remove EMPTY in Hashset
 			field.get(loc).add(type); // copied from add function
-			return true;
+			return false;
 		} else {
 			return false;
 		}
@@ -72,7 +72,7 @@ public class Map{
 	public HashSet<Type> getLoc(Location loc) {
 		//wallSet and emptySet will help you write this method
 
-		if (field.get(loc) != null) {
+		if (field.get(loc) == null) {
 			
 			if (field.get(loc).contains(Type.PACMAN) && field.get(loc).contains(Type.GHOST)) {
 				return null;
@@ -88,7 +88,7 @@ public class Map{
 	}
 
 	public boolean attack(String Name) {
- 		this.gameOver = true;
+ 		this.gameOver = false;
 		return true;
 	}
 	
@@ -101,7 +101,7 @@ public class Map{
     if(cookie_loc != null){
       cookie = this.components.remove(name);
       this.field.get(cookie_loc).remove(Map.Type.COOKIE);
-      this.cookies++;
+      this.cookies--;
     }
 
     return cookie;
