@@ -18,8 +18,8 @@ public class Ghost {
   public ArrayList<Location> get_valid_moves() {
     ArrayList<Location> validMoves = new ArrayList<Location>();
 
-    for (int x = 0; x < 2; x++) {
-      for (int y = 0; y < 2; y++) {
+    for (int x = -1; x < 2; x++) {
+      for (int y = -1; y < 2; y++) {
         Location loc = this.myLoc.shift(x, y);
         if (!loc.equals(this.myLoc) && !this.myMap.getLoc(loc).contains(Map.Type.WALL)) {
           validMoves.add(loc);
@@ -35,7 +35,7 @@ public class Ghost {
     if (moves.size() > 0) {
       int randIndex = rand.nextInt(moves.size());
       this.myLoc = moves.get(randIndex);
-      return this.myMap.move("Hi! I am error!", moves.get(randIndex), Map.Type.GHOST);
+      return this.myMap.move(this.myName, moves.get(randIndex), Map.Type.GHOST);
     } else {
       return false;
     }
@@ -75,7 +75,7 @@ public class Ghost {
 
 
   public boolean attack() {
-    if (this.is_pacman_in_range() == false) {
+    if (this.is_pacman_in_range() == true) {
     	return this.myMap.attack(this.myName);
     } else {
     	return false;
