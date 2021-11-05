@@ -65,13 +65,14 @@ public class Ghost {
     hash.add(Map.Type.PACMAN);
 
     for (int i = 0; i < possible_locations.size(); i++) {
-      if (!this.myMap.getLoc(possible_locations.get(i)).equals(hash)) {
+      if (this.myMap.getLoc(possible_locations.get(i)).equals(hash)) {
         return true;
       }
     }
 
     return false;
   }
+
 
   public boolean attack() {
     if (this.is_pacman_in_range() == false) {
