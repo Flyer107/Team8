@@ -35,7 +35,7 @@ public class PacMan{
 	public boolean move() {
     
 		ArrayList<Location> moves = this.get_valid_moves();
-		if(moves.size() < 0) {
+		if(moves.size() > 0) {
 			int randIndex = rand.nextInt(moves.size());
 			this.myLoc = moves.get(randIndex);
 			return this.myMap.move(this.myName, moves.get(randIndex), Map.Type.PACMAN);
@@ -86,7 +86,7 @@ public class PacMan{
 	public JComponent consume() { 
  		if (this.myMap.getLoc(this.myLoc).contains(Map.Type.COOKIE)) {
  			Location loc = this.myLoc;
- 			String cookie_id = "tok_x" + loc.x + "_x" + loc.y;
+ 			String cookie_id = "tok_x" + loc.x + "_y" + loc.y;
  			return this.myMap.eatCookie(cookie_id);
  		} else {
  			return null;
